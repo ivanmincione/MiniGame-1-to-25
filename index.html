@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game 1 to 25</title>
+        <!-- GOOGLEFONTS -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <!-- STYLE -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- App Wrapper -->
+        <div class="wrapper">
+            <div class="game-window">
+                <div class="message-container">
+                    <div class="game-start-message">
+                        Tempo trascorso : <span id="timer">0s</span>
+                    </div>
+                </div>
+                <!-- griglia di gioco contenente i numeri cliccabili -->
+                <div class="game-board-container">
+                    <div class="game-board">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </div>
+                <div class="start-screen screen" id="startScreen">
+
+                    <div class="game-title">
+                        Click 1 to 25!
+                    </div>
+
+                    <div class="msg">
+                        Seleziona il più velocemente possibile i numeri da 1 a 25 in ordine crescente. <br>
+                        Se selezioni un numero non corretto dovrai ricominciare. <br>
+                        Buona Fortuna : )
+                    </div>
+                    <button onclick="statGame(event)">Start</button>
+                </div>
+
+                <div class="game-over-screen screen" id="gameOverScreen" data-state="hidden">
+                    <div class="screen-title">
+                        HAI PERSO
+                    </div>
+
+                    <div class="msg">Riprova, sarai più fortunato !</div>
+
+                    <button onclick="statGame(event)">Riprova</button>
+                </div>
+
+                <div class="score-screen screen" id="scoreScreen" data-state="hidden">
+                    <div class="screen-title">
+                        HAI VINTO
+                    </div>
+
+                    <div class="msg">Il tuo tempo :  <span id="scorePageTime"></span></div>
+
+                    <button onclick="statGame(event)">Gioca ancora</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="main.js" charset="utf-8"></script>
+    </body>
+</html>
